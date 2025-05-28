@@ -1,0 +1,40 @@
+REACT NATIVE:
+
+TextInput - onChangeText, onSubmitEditing
+ScrollView - pagingEnabled
+ViewPager
+FlatList - data, renderItem
+SectionList - sections, renderSectionHeader
+npm start -- --port=8088
+npm run android -- --verbose => (to know more about the errors)
+import {Platform} from 'react-native';
+
+...Platform.select({
+      ios: {
+        backgroundColor: 'red',
+      },
+      android: {
+        backgroundColor: 'green',
+      },
+      default: {
+        // other platforms, web for example
+        backgroundColor: 'blue',
+      },
+    })
+
+const Component = Platform.select({
+  ios: () => require('ComponentIOS'),
+  android: () => require('ComponentAndroid'),
+})();
+
+Platform.Version
+
+BigButton.ios.js
+BigButton.android.js
+BigButton.native.js
+
+packages => https://reactnative.directory/ , npm registry
+
+// @refresh reset => tweaking an animation that only happens on mount
+
+

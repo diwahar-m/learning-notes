@@ -65,7 +65,7 @@ Remember that inside event handlers, state behaves like a snapshot.
 React batches updates from different components together, so there will only be one render pass.
 Can use custom hook for data fetching.
 Props, state, and other values declared inside the component are reactive because they’re calculated during rendering
-location.pathname & ref.current can't be a dpendency.
+location.pathname & ref.current can't be a dependency.
 Avoid relying on objects and functions as dependencies,
 Props, state, and variables declared inside your component’s body are called reactive values.
 Every reactive value used by your Effect’s code must be declared in your dependency list.
