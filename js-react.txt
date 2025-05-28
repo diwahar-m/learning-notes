@@ -1,0 +1,76 @@
+JAVASCRIPT:
+
+Execution context
+Call-stack
+Hoisting
+Function
+windows & This
+undefined & not defined
+scope & lexical environment
+let, const & temporal dead zone
+Block scope & shadowing
+closures
+setTimeout
+1st class function
+callback functions
+async javascript
+v8
+Higher Order functions
+Map filter reduce
+Stack, Event loop, mini Task Queue, Task Queue & Concurrency
+Callback hell
+Promises
+Promise chaining & error handling
+promise API
+async await
+this 
+Bubbling(e.stopPropagation()) & Capturing
+Debouncing & throttling
+Polling
+
+REACT:
+
+components - reusable UI elements.
+“Strict Mode” - calls each component’s function twice during development. 
+component -> UI Tree -> rendering DOM.
+Triggering -> Rendering -> Committing to DOM.
+React commits changes to the DOM.
+React does not touch the DOM if the rendering result is the same as last time
+State as a Snapshot
+React processes state updates after event handlers have finished running. This is called batching.
+Queue & updater function.
+React preserves a component’s state for as long as it’s being rendered at its position in the UI tree
+Different components at the same position reset state
+useState Vs useReducer
+useContext
+React contexts don’t override each other. 
+useRef ( actually a custom hook using useState in React).
+getMap();
+Don’t read or write ref.current during rendering.
+flushSync(()=> setState()) -> update DOM synchronously
+useEffect => side effect of rendering.
+useEffect(()=> {}) => executes after every render 
+useEffect(()=> {},[])=> executes when the component “mounts”
+React will skip the Effect if all of its dependencies have the same values as during the last render.
+data fetching => React Query
+React Router
+components can sometimes render twice during development. 
+process.env.NODE_ENV
+use <React.StrictMode>
+useMemo()
+Expensive calculation -> creating or looping over thousands of objects
+console.time() 
+console.timeEnd()
+Remember that inside event handlers, state behaves like a snapshot. 
+React batches updates from different components together, so there will only be one render pass.
+Can use custom hook for data fetching.
+Props, state, and other values declared inside the component are reactive because they’re calculated during rendering
+location.pathname & ref.current can't be a dpendency.
+Avoid relying on objects and functions as dependencies,
+Props, state, and variables declared inside your component’s body are called reactive values.
+Every reactive value used by your Effect’s code must be declared in your dependency list.
+Custom Hooks.
+useTransition()
+
+
+
