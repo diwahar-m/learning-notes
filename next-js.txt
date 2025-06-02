@@ -16,11 +16,12 @@ import { Geist } from 'next/font/google'
 
 import localFont from 'next/font/local'
 
-use client components when handlind ("use client"),
+use client components when handling ("use client"),
   state and event handlers
   lifecycle logic
   browser only API
   custom hooks
+
 
 RSC payload used by React on the client to update the browser's DOM 
 RSC Payload is prefetched and cached for instant navigation.
@@ -46,4 +47,99 @@ useActionState()
 partial pre rendering
 
 matcher allows you to filter Middleware to run on specific paths.
+
+instrumentation-client.js (or) useReportWebVitals 
+process.env.NEXT_RUNTIME
+
+authentication & authorization
+stateless & database sessions
+
+Middleware runs on every route
+
+Due to Partial Rendering, be cautious when doing checks in Layouts
+consider a shared layout
+authorization in the route handler ex:(route.js)
+
+ Next.js saves a cache to .next/cache that is shared between builds.
+
+CSP -  series of instructions from a website to a browser,
+
+nounce - unique, random string
+added to csp header in middleware 
+
+ to load environment variables outside of the Next.js runtime, use the @next/env package.
+use $ to reference other variables e.g. $VARIABLE inside of your .env* files.
+
+.env.test
+.env.development
+.env.production
+
+Object.fromEntries(formData)
+
+useFormStatus()
+
+invalidate pages on-demand with the revalidatePath function
+
+// middleware.js
+let headers = { 'accept-language': 'en-US,en;q=0.5' }
+
+2 Lazy loading types 
+1) 
+import dynamic from 'next/dynamic'
+const ComponentA = dynamic(() => import('../components/A'))
+2)
+import { lazy } from 'react';
+const ComponentA = lazy(() => import('../components/A'));
+<Suspense fallback={<Loading />}>
+  <h2>Preview</h2>
+  <ComponentA />
+</Suspense>
+
+React.lazy() is SSR by default,
+To make it client component,
+const ComponentC = dynamic(() => import('../components/C'), { ssr: false })
+ssr: false option is not supported in Server Components
+
+ // Loading external libraries dynamically
+    const Fuse = (await import('fuse.js')).default 
+
+// custom loading
+const WithCustomLoading = dynamic(
+  () => import('../ComponentA'),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+)
+
+// named import 
+const ClientComponent = dynamic(() =>
+  import('../components/hello').then((mod) => mod.Hello)
+)
+
+// improves local performance
+npm run dev --turbopack
+
+// Do this:
+import Icon1 from 'react-icons/md/Icon1'
+
+useRouter()
+usePathname()
+useSearchParams()
+
+network waterfall 
+
+SSG 
+ - getStaticProps()
+ - HTML pre re
+
+SSR 
+ - getServerSideProps()
+ - renders HTML for each request
+ - faster initial load
+ - for constantly changing data pages
+
+CSR 
+  - server sends min HTML page 
+  - browser executes JS to render the content
+  - high interaction
 
