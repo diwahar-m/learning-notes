@@ -38,3 +38,20 @@ packages => https://reactnative.directory/ , npm registry
 // @refresh reset => tweaking an animation that only happens on mount
 
 
+ImageBackground
+
+react-navigation &&  react-native-navigation
+
+npm install @react-navigation/native @react-navigation/native-stack
+npm install react-native-screens react-native-safe-area-context
+
+https://reactnavigation.org/docs/stack-navigator 
+NavigationContainer
+createNativeStackNavigator
+createBottomTabNavigator
+createDrawerNavigator
+createMaterialTopTabNavigator
+navigation.navigate 
+
+
+

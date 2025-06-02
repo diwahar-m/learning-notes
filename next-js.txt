@@ -1,0 +1,49 @@
+app router 
+file system routing
+baseUrl in config.json
+
+middleware.ts 
+
+Routing files => layout, template, error, loading, not-found, page
+
+[folder] => dynamic route
+[ ... folder] => catch all route segment
+
+(folder) => group routes 
+_folder => out of routing
+
+import { Geist } from 'next/font/google'
+
+import localFont from 'next/font/local'
+
+use client components when handlind ("use client"),
+  state and event handlers
+  lifecycle logic
+  browser only API
+  custom hooks
+
+RSC payload used by React on the client to update the browser's DOM 
+RSC Payload is prefetched and cached for instant navigation.
+
+Hydration is React's process for attaching event handlers to the DOM
+
+React context is not supported in Server Components.
+
+import 'server-only' 
+API_KEY
+
+layouts and pages are rendered in parallel
+Promise.all[]
+
+for fetch request,
+  { cache: 'force-cache' }
+  { next: { revalidate: 3600 } }
+
+"use server" => to mark the function as a Server Function
+
+useActionState()
+
+partial pre rendering
+
+matcher allows you to filter Middleware to run on specific paths.
+
