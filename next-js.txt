@@ -132,7 +132,7 @@ SSG
  - getStaticProps()
  - HTML pre re
 
-SSR 
+SSR
  - getServerSideProps()
  - renders HTML for each request
  - faster initial load
@@ -143,3 +143,109 @@ CSR
   - browser executes JS to render the content
   - high interaction
 
+rewrites()
+
+packages imported inside Server Components and Route Handlers are automatically bundled by Next.js 
+
+@next/bundle-analyzer
+ANALYZE=true npm run build
+
+optimizePackageImports
+serverExternalPackages
+
+Server components don't require JavaScript to render on the client. 
+
+Prefetching - When link to a new route enters user's viewport, Next.js prefetches the route in background. This makes navigation to new routes almost instant. 
+
+Caching - Server & Client Components, static assets & more.
+
+layout.js
+ - to share UI across pages,
+ - partial rendering
+
+<Link>
+ - client side navigation
+
+check the placement of your "use client" boundaries
+
+Wrap dynamic API within <Suspense> boundaries.
+
+avoid Route handlers from server components 
+
+Loading UI & Suspense
+
+PWA 
+ - accessibility for native mobile apps
+ - cross platform
+app/manifest.ts
+
+"web-push" package for notifications.
+
+configure security headers using the next.config.js file 
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
+      },
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/javascript; charset=utf-8',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+redirect()
+ - server components,
+ - during rendering process of Client components 
+
+permanentRedirect() 
+useRouter()
+
+const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/about',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
+}
+redirects runs before Middleware.
+NextResponse.redirect() in middleware.ts
+
+To load a third-party script,
+import Script from 'next/script'
+ <Script src="https://example.com/script.js" strategy="worker" />
+
+By default, environment variables are only available on the server. 
+To expose an environment variable to the browser, it must be prefixed with NEXT_PUBLIC_
+
+Single Page Application:
+ - CSR (handled by JS, 1 HTML file)
+ - No full page reloads
+
+ Client components are prerendered during next build
+
+ Next.js generates an HTML file per route
+
+ webAPI - window, localStorage, Navigator
+
+ unit testing - component & integration 
+ E2E testing
+ snapshot testing 
+ 
