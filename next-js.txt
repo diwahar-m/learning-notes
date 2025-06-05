@@ -4,7 +4,7 @@ baseUrl in config.json
 
 middleware.ts 
 
-Routing files => layout, template, error, loading, not-found, page
+Routing files => layout, template, error, loading, not-found, page (lte, lnp)
 
 [folder] => dynamic route
 [ ... folder] => catch all route segment
@@ -21,7 +21,6 @@ use client components when handling ("use client"),
   lifecycle logic
   browser only API
   custom hooks
-
 
 RSC payload used by React on the client to update the browser's DOM 
 RSC Payload is prefetched and cached for instant navigation.
@@ -248,4 +247,70 @@ Single Page Application:
  unit testing - component & integration 
  E2E testing
  snapshot testing 
- 
+
+ Streaming allows you to break down the page's HTML into smaller chunks
+ Streaming is commonly used in combination with Large Language Models (LLMs), such as OpenAI
+
+ Route Handlers
+  - There cannot be a route.js file at the same route as page.js 
+  - GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS
+  - import { cookies } from 'next/headers' 
+  - import { headers } from 'next/headers'
+  - THis is server side only.
+--- (option-1) ---
+app/
+  api/
+    my-route/
+      route.js   ← API route handler
+  my-route/
+    page.js      ← Page component
+--- (option-2) ---
+app/
+  my-route/
+    page.js      ← Page component
+    api/
+      route.js   ← API route handler
+--- (option-3) ---
+// app/my-route/page.js
+export default function Page() {
+  async function handleSubmit(data) {
+    'use server'
+    // Server-side logic here
+  }
+
+  return <form action={handleSubmit}>...</form>
+---
+// app/hello/page.js
+export default async function Page() {
+  // This explicitly calls the route handler
+  const res = await fetch('/api/hello');
+  const data = await res.json();
+  
+  return <div>{data.message}</div>;
+}
+---
+
+Middleware 
+ - not for session management 
+ - Middleware will be invoked for every route 
+ - matcher allows you to filter Middleware to run on specific paths. 
+ - 2nd prop - NextFetchEvent (waitUntil)
+
+use Server Actions when you need to handle user-triggered mutations, form submissions 
+Works even if JavaScript hasn't loaded on the client
+
+Server Components support progressive enhancement by default, meaning the form will be submitted even if JavaScript hasn't loaded yet or is disabled. 
+
+Request memoization(GET method) is a React feature
+
+Data cache
+
+Time based revalidation
+fetch('https://...', { next: { revalidate: 3600 } })
+
+On-demand Revalidation
+ - revalidateTag()
+ - revalidatePath()
+
+Opting out
+ - await fetch('https://api.vercel.app/blog', { cache: 'no-store' })
