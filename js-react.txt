@@ -78,3 +78,4 @@ use => to read a message like a promise or context
 Controlled & Uncontrolled components
 React.memo()
 shallow (vs) deep copy
+constructor

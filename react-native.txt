@@ -1,12 +1,18 @@
 REACT NATIVE:
 
+ImageBackground
+Button - onPress, onLongPress
 TextInput - onChangeText, onSubmitEditing
 ScrollView - pagingEnabled
 ViewPager
-FlatList - data, renderItem
+FlatList 
+ - data, renderItem, keyExtractor
+ - use renderItem with useCallback
 SectionList - sections, renderSectionHeader
 npm start -- --port=8088
 npm run android -- --verbose => (to know more about the errors)
+
+
 import {Platform} from 'react-native';
 
 ...Platform.select({
@@ -33,6 +39,9 @@ BigButton.ios.js
 BigButton.android.js
 BigButton.native.js
 
+// @refresh reset 
+ - fully remount the component instead of trying to preserve its state during hot reloads
+
 packages => https://reactnative.directory/ , npm registry
 
 // @refresh reset => tweaking an animation that only happens on mount
@@ -51,7 +60,87 @@ createNativeStackNavigator
 createBottomTabNavigator
 createDrawerNavigator
 createMaterialTopTabNavigator
-navigation.navigate 
+navigation.navigate(<component>,{<props>})
 
 
+Animated
+Animated.createAnimatedComponent()
 
+const fadeAnim = useAnimatedValue(0); 
+
+Animated.timing(this.state.xPosition, {
+  toValue: 100,
+  easing: Easing.back(),
+  duration: 2000,
+  useNativeDriver: true,
+}).start();
+
+Animated.decay(position, {
+      velocity: 1,       // Initial speed
+      deceleration: 0.9, // Slowing rate (0-1)
+    }).start();
+
+Animated.spring(...)
+Animated.sequence([...])
+Animated.parallel([...])
+
+value.interpolate({
+  inputRange: [0, 1],
+  outputRange: [0, 100],
+});
+
+ const pan = useRef(new Animated.ValueXY()).current;
+  const panResponder = useRef(
+    PanResponder.create({
+      onMoveShouldSetPanResponder: () => true,
+      onPanResponderMove: Animated.event([null, {dx: pan.x, dy: pan.y}]),
+      onPanResponderRelease: () => {
+        Animated.spring(pan, {
+          toValue: {x: 0, y: 0},
+          useNativeDriver: true,
+        }).start();
+      },
+    }),
+  ).current;
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titleText}>Drag & Release this box!</Text>
+      <Animated.View
+        style={{
+          transform: [{translateX: pan.x}, {translateY: pan.y}],
+        }}
+        {...panResponder.panHandlers}>
+        <View style={styles.box} />
+      </Animated.View>
+    </View>
+
+<Animated.View
+  style={{
+    transform: [
+      {scale: this.state.scale},
+      {rotateY: this.state.rotateY},
+      {perspective: 1000}, // without this line this Animation will not render on Android while working fine on iOS
+    ],
+  }}
+/>
+
+Async storage 
+ - for storing non sensitive data 
+
+react-native-keychain 
+
+SSL - https://
+
+(aria - web)
+(accessibility - react-native) 
+
+# For Android:
+npx react-native log-android
+# Or, for iOS:
+npx react-native log-ios
+
+Hermes 
+ - open-source JavaScript engine optimized for React Native. 
+ - npm run android -- --mode="release" 
+ - compile JavaScript to Hermes Bytecode during build time which will improve your app's startup speed on device
