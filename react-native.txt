@@ -141,3 +141,6 @@ Hermes
  - open-source JavaScript engine optimized for React Native. 
  - npm run android -- --mode="release" 
  - compile JavaScript to Hermes Bytecode during build time which will improve your app's startup speed on device
+
+nativewind package 
+ - to use tailwind css.
