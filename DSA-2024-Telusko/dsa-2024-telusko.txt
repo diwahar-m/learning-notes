@@ -1,0 +1,49 @@
+Algorithms
+ - set of instructions
+
+Abstract Data Types 
+ - a data wth associated operations of it.
+   Ex: array indexing in java.
+
+Space complexity
+ - less memory
+
+
+
+Linear search 
+  - ordinary way based on the length
+
+Binary search
+ - only works for sorted array
+ - halfing the length
+ - based on starting and ending points
+
+Time complexity 
+  - how running time of an algorithm increases with size of input data 
+
+Big O Notation 
+
+
+O(n) 
+ - If the number of elements (n) in the array increases, 
+    the time also increases. Ex: Linear search
+
+O(log n)
+  - ex: Binary search
+  -  Between O(1) and O(n)
+  -  log2(8) = 3
+  -  log2(16) = 4
+  - One step only increases when value gets doubled.
+
+Sorting 
+Bubble sort : O(n)2
+ - not efficient but simple to understand 
+ - sorting the array in the ascending or descending order
+ - By swapping the 2 items in an order in n iterations.
+ - Ex: for 6 items , we need 5 iterations.
+
+ Selection sort: O(n)2
+  - selecting an item as largest.
+  - comparing it with all items.
+  - if it is largest, swaping it with the last element.
+  - Then , doing iterations for others.
