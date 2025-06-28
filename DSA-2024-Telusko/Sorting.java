@@ -16,8 +16,32 @@ public class Sorting {
                 }
             }
         }
-        // -----------------
+        // ----------------
         
+        // ----- Selection Sort ---- 
+        int minIndex = -1;
+        for(int i=0; i<size-1;i++){
+            minIndex = i;
+            for(int j=i+1; j< size; j++){
+                if(nums[minIndex] > nums[j])
+                    minIndex = j;
+            }
+
+            temp = nums[minIndex];
+            nums[minIndex] = nums[i];
+            nums[i] = temp;
+        }
+
+        // ----- Insertion sort ----- 
+        for(int i=1; i<nums.length; i++){
+            int key = nums[i]; 
+            int j = i-1;
+
+            while(j>=0 && nums[j] > key){
+                nums[j+1] = nums[j];
+                j--;
+            }
+            nums[j+1] = key;
+        }
     }
-    
 }

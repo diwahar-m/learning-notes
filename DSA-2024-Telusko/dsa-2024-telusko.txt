@@ -41,9 +41,17 @@ Bubble sort : O(n)2
  - sorting the array in the ascending or descending order
  - By swapping the 2 items in an order in n iterations.
  - Ex: for 6 items , we need 5 iterations.
+ - swapping occurs for every iterations in inner loop
 
  Selection sort: O(n)2
   - selecting an item as largest.
   - comparing it with all items.
   - if it is largest, swaping it with the last element.
   - Then , doing iterations for others.
+  - swapping not occurs for every iterations in inner loop.
+
+Insertion sort 
+ - Putting elements at the right location 
+ - Like playing cards 
+ - Comparing the items with all others to change it's position.
+ 
