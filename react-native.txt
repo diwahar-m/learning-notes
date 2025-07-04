@@ -1,11 +1,16 @@
 REACT NATIVE:
 
+import React from 'react'; // must use this for JSX
+
 ImageBackground
 Button - onPress, onLongPress
 TextInput - onChangeText, onSubmitEditing
+
 ScrollView - pagingEnabled
+react-native-pager-view
+
 ViewPager
-FlatList 
+FlatList
  - data, renderItem, keyExtractor
  - use renderItem with useCallback
 SectionList - sections, renderSectionHeader
@@ -110,7 +115,7 @@ value.interpolate({
         {...panResponder.panHandlers}>
         <View style={styles.box} />
       </Animated.View>
-    </View>
+    </View>)
 
 <Animated.View
   style={{
