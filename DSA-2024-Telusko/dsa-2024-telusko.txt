@@ -1,13 +1,15 @@
 Algorithms
  - set of instructions
 
+Algorithm analysis
+ - based on space & time complexity.
+
 Abstract Data Types 
  - a data wth associated operations of it.
    Ex: array indexing in java.
 
 Space complexity
  - less memory
-
 
 
 Linear search 
@@ -18,17 +20,20 @@ Binary search
  - halfing the length
  - based on starting and ending points
 
+
 Time complexity 
   - how running time of an algorithm increases with size of input data 
 
 Big O Notation 
+  - to understand the time complexity
 
 
-O(n) 
+O(n) : Linear Time
  - If the number of elements (n) in the array increases, 
-    the time also increases. Ex: Linear search
+    the time also increases. 
+  -Ex: Linear search
 
-O(log n)
+O(log n) : Logarithmic time
   - ex: Binary search
   -  Between O(1) and O(n)
   -  log2(8) = 3
@@ -36,7 +41,7 @@ O(log n)
   - One step only increases when value gets doubled.
 
 Sorting 
-Bubble sort : O(n)2
+Bubble sort : O(n)2 : Quadratic time
  - not efficient but simple to understand 
  - sorting the array in the ascending or descending order
  - By swapping the 2 items in an order in n iterations.
@@ -48,10 +53,38 @@ Bubble sort : O(n)2
   - comparing it with all items.
   - if it is largest, swaping it with the last element.
   - Then , doing iterations for others.
-  - swapping not occurs for every iterations in inner loop.
+  - swapping occurs at the outer loop.
 
 Insertion sort 
  - Putting elements at the right location 
+ - Shifting occurs here
  - Like playing cards 
  - Comparing the items with all others to change it's position.
  
+Quick Sort: O(n log(n)) 
+ - Divide & Conquer 
+ - using recursion 
+ - Pivot - central point of the problem 
+ - we get tree structure here 
+ 
+
+Divide & Conquer & Combine 
+
+Tree 
+ - Branch from the Root element 
+
+Binary Tree 
+ - Branch for each element is only two
+
+
+Recursion 
+ - function calling itself 
+
+
+ Merge sort: O(n log(n)) 
+  - Divide  by finding the mid index 
+  - Divide until getting the single element 
+  - 
+
+
+

@@ -6,8 +6,8 @@ ImageBackground
 Button - onPress, onLongPress
 TextInput - onChangeText, onSubmitEditing
 
-ScrollView - pagingEnabled
-react-native-pager-view
+ScrollView - pagingEnabled // swiping gestures for pages
+react-native-pager-view // for invdividual item horizontal scroll.
 
 ViewPager
 FlatList

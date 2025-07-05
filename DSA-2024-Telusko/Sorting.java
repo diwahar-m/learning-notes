@@ -26,7 +26,7 @@ public class Sorting {
                 if(nums[minIndex] > nums[j])
                     minIndex = j;
             }
-
+ 
             temp = nums[minIndex];
             nums[minIndex] = nums[i];
             nums[i] = temp;
