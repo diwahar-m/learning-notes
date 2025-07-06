@@ -9,7 +9,6 @@ public class QuickSort {
             quickSort(arr, pi+1, high);
             
         }
-
     }
 
     public static int partition(int[] arr, int low, int high){
@@ -17,16 +16,17 @@ public class QuickSort {
         int i =low-1;
 
         for(int j=low; j<high;j++){
-            if(arr[j]< pivot){
+            if(arr[j]< pivot){  
                 i++;
-                int temp = arr[i];
-                arr[i] = arr[j];
+                int temp = arr[i]; //i=0
+                arr[i] = arr[j]; //j=0
                 arr[j] = temp;
             }
         }
+        // changing pivot index
         int temp = arr[i+1];
         arr[i+1] = arr[high];
-        arr[high] = temp;
+        arr[high] = temp;   
 
         return i+1;
     }

@@ -81,10 +81,11 @@ Recursion
  - function calling itself 
 
 
- Merge sort: O(n log(n)) 
+ Merge sort: O(n log(n))
   - Divide  by finding the mid index 
   - Divide until getting the single element 
-  - 
+  - compare with each other & find small element & add to array 
+
 
 
 
