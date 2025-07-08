@@ -102,8 +102,3 @@ LinkedList:
     - every node has a data and 2 ref.
       - 1st ref points to previous node. 
       - 2nd ref points to next node. 
-
-
-
-
-

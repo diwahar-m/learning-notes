@@ -1,7 +1,6 @@
 
 public class Sorting {
     public static void main(String[] args) {
-        
         // ----- Bubble Sort -------
         int nums[] = {6, 5, 2, 8, 9, 4};
         int size= nums.length;

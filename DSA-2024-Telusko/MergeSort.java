@@ -7,7 +7,6 @@ public class MergeSort {
             merge(arr, l, mid, r);
 
         }
-        
     }
 
     public static void merge(int[] arr, int l, int mid, int r){
@@ -31,7 +30,7 @@ public class MergeSort {
         int j=0;
         int k=l;
 
-        // comparing left & right arrayv
+        // comparing left & right array
         while(i<n1 && j <n2){
             if(lArr[i] <= rArr[j]){
                 arr[k] = lArr[i];
@@ -41,7 +40,7 @@ public class MergeSort {
                 j++;
             }
             k++;
-        } 
+        }
 
         // left over in left & right arrays 
         while(i<n1 ){

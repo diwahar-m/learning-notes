@@ -68,10 +68,6 @@ react-native-clean-project //  clear project's cache
 
 react-native-cameraroll  
 
-
-
-
-
 react-navigation &&  react-native-navigation
 
 npm install @react-navigation/native @react-navigation/native-stack
@@ -154,6 +150,7 @@ Animated
  - it doesn't change flex & position. 
 
 LayoutAnimation
+ - for fire & forget animations.
  
 
 react-native-dotenv 
@@ -161,9 +158,11 @@ react-native-config
 
 @react-native-async-storage/async-storage  
  - for non sensitive data 
+ react-native-mmkv
+  - for both datas
 
 PKCE 
- - an extension to the OAuth 2. 
+ - an extension to the OAuth 2.
 
 SSL Pinning 
  - request with trusted certificate 
@@ -187,17 +186,89 @@ react-native-keychain
 SSL - https://
 
 (aria - web)
-(accessibility - react-native) 
+(accessibility - react-native)   
+
 
 # For Android:
 npx react-native log-android
 # Or, for iOS:
 npx react-native log-ios
 
+metro-symbolicate // for release buildss
+
+
+Jest // Testing 
+Test Renderer 
+React Natiive Testing Library 
+Detox 
+
+
+redux-logger 
+babel-plugin-transform-remove-console // removes console.* calls in prod 
+
+FlatList Vs FlashList Vs LegendList 
+
+yarn react-native run-android --active-arch-only 
+ - reduces native build time 
+ - not for prod 
+
+Gradle
+ - gradle build done by configuration & Execution phase
+
+android/gradle.properties file:
+ - org.gradle.configuration-cache=true // to skip configuration phase on subsequent builds 
+
+ ccache 
+ sccache
+
+android/app/build 
+
+FlatList optimization 
+ - getItemLayout
+ - keyExtractor
+ - useCallback for renderItem
+
+
+react-native-fast-image 
+
+
 Hermes 
  - open-source JavaScript engine optimized for React Native. 
  - npm run android -- --mode="release" 
  - compile JavaScript to Hermes Bytecode during build time which will improve your app's startup speed on device
+
+Hermes 
+
+
+React's lazy with Suspense :
+const MarkdownPreview = lazy(() => delayForDemo(import('./MarkdownPreview.js')));
+
+  return (
+        <Suspense fallback={<Loading />}>
+          <MarkdownPreview markdown={markdown} />
+        </Suspense>
+      )
+
+// Add a fixed delay so you can see the loading state
+function delayForDemo(promise) {
+  return new Promise(resolve => {
+    setTimeout(resolve, 2000);
+  }).then(() => promise);
+}
+
+require call will be evaluated lazily
+
+Profiling
+
+Codegen in react-native 
+ - generates boilerplate specific to native apps.
+
+
+
+
+
+
+
 
 nativewind package 
  - to use tailwind css.
