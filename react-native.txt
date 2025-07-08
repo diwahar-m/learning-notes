@@ -162,7 +162,17 @@ react-native-config
 @react-native-async-storage/async-storage  
  - for non sensitive data 
 
+PKCE 
+ - an extension to the OAuth 2. 
 
+SSL Pinning 
+ - request with trusted certificate 
+
+LogBox 
+
+npx react-native log-android
+
+debugger; 
 
 
 

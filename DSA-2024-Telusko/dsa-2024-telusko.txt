@@ -41,7 +41,7 @@ O(log n) : Logarithmic time
   - One step only increases when value gets doubled.
 
 Sorting 
-Bubble sort : O(n)2 : Quadratic time
+ Bubble sort : O(n)2 : Quadratic time
  - not efficient but simple to understand 
  - sorting the array in the ascending or descending order
  - By swapping the 2 items in an order in n iterations.
@@ -55,13 +55,13 @@ Bubble sort : O(n)2 : Quadratic time
   - Then , doing iterations for others.
   - swapping occurs at the outer loop.
 
-Insertion sort 
+ Insertion sort 
  - Putting elements at the right location 
  - Shifting occurs here
  - Like playing cards 
  - Comparing the items with all others to change it's position.
  
-Quick Sort: O(n log(n)) 
+ Quick Sort: O(n log(n)) 
  - Divide & Conquer 
  - using recursion 
  - Pivot - central point of the problem 
@@ -85,6 +85,24 @@ Recursion
   - Divide  by finding the mid index 
   - Divide until getting the single element 
   - compare with each other & find small element & add to array 
+
+updating array in the middle is tough, so we using Linked list.
+
+LinkedList: 
+ - Node 
+   - every node has a data and ref to next node.
+ - ref/address
+ - Head 
+   - points to the 1st location 
+ Ex: By changing the ref, we can add and delete the node in linked list. 
+  
+  - Singly Linked list
+    - every node has a data and ref to next node.
+  - Doubly Linked list 
+    - every node has a data and 2 ref.
+      - 1st ref points to previous node. 
+      - 2nd ref points to next node. 
+
 
 
 
