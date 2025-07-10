@@ -296,11 +296,40 @@ COMPONENTS :
 react-native-paper 
 
 APIs:
-useColorScheme 
+transform - scale, translate, rotate, skew 
 DeepLinks & Universal Links 
- 
+useColorScheme 
+useWindowDimensions
+BackHanlder 
+PermissionHandler 
+ToastAndroid 
+
+
+ARCHITECTURE: 
+onLayout
+ - synchronous access
+ - size/position of a component after the layout phase
+useTransition
+Render -> Commit -> Mount 
+ - 
+Render: 
+ - shadow node for host components 
+Commit:
+ - calculates position & size of shadow node 
+Mount:
+ - renders host view tree on screen
+
+
+View Flattening for layout ony nodes in Host View 
+
+JS & UI Thread 
+
+fabric renderer 
+
+
 
 
 
 nativewind package 
  - to use tailwind css.
+@react-native-vision-camera 
