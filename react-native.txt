@@ -290,7 +290,16 @@ const setOpacityTo = useCallback(value => {
   viewRef.current.setNativeProps({
     opacity: value,
   });
-}, []);
+}, []); 
+
+COMPONENTS : 
+react-native-paper 
+
+APIs:
+useColorScheme 
+DeepLinks & Universal Links 
+ 
+
 
 
 nativewind package 

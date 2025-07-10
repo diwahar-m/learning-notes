@@ -101,4 +101,24 @@ LinkedList:
   - Doubly Linked list 
     - every node has a data and 2 ref.
       - 1st ref points to previous node. 
-      - 2nd ref points to next node. 
+      - 2nd ref points to next node.  
+
+Stack:
+ - a Linear data staructure.
+ - follows last in first out 
+ - using push & pop.
+ - overflow: when stack is full
+ - underflow: when there is no element in stack. 
+ - peek -  to check the value of last element
+ - Stack can be created by using either stack or linked list. 
+ - Java has a inbuilt Stack. but, we can create our own.
+
+Oueue: 
+ - First in First out 
+ - Enqueue : Inserting data 
+ - Dequeue : Removing data 
+ - Circualr Queue: 
+   - next position after the last index is the first index  
+ - Java has a inbuilt Queue. but, we can create our own.
+
+   
