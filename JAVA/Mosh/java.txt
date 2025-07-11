@@ -4,4 +4,29 @@
  - micro edition - mobile 
  - java card - smart card 
 
- 
+ Primitives:
+  - points to value
+    Data  Max Byte
+  - byte  128 1
+  - short 32K 2
+  - int  2b   4
+  - long      8
+  - float     4
+  - double    8 
+  - char      2 
+  - boolean   1 
+
+Reference;
+ - for complex data 
+ - points to address in memory.
+ - Strings are immutable
+
+Strings:
+ - \n - new line
+ - \\ - prints  \
+ - \" - prints "
+ - \t - <gives tab space>
+
+- Implicit or Automatic casting 
+  - (byte > short > int > long > float > double)   
+- Explicit casting
