@@ -121,4 +121,23 @@ Oueue:
    - next position after the last index is the first index  
  - Java has a inbuilt Queue. but, we can create our own.
 
-   
+Tree: 
+ - a Hierarchical structure 
+ - Node, Root, Parent, child, subtree
+ - Edge:  Line connecting parent & child
+ - Leaf: Node which don't have a child 
+ - Depth: Edges need to be passed to travel from node to node.
+ - Height:  highest node of the entire tree 
+
+Binary Tree:
+ - Maximum , 2 child nodes for each node 
+
+Binary Search Tree: 
+ - Left sub tree has values less than the root node.
+ - Right sub tree has values greater than the root node. 
+
+Tree traaversal: 
+ - In order: left -> root -> right
+ - Pre order: root -> left -> right
+ - Post order: left -> right -> root
+ 
