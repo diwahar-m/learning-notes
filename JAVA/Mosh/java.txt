@@ -1,0 +1,7 @@
+4 editions: 
+ - standard edition 
+ - enterprise edition - with additional packages
+ - micro edition - mobile 
+ - java card - smart card 
+
+ 
