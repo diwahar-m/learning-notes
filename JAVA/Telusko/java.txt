@@ -1,0 +1,19 @@
+
+Modifiers:
+- if identifier need to be accessible outside the package, make it as public.
+- private can be used in same class only. 
+- default can be accessed in the same package only.
+- protected  can't be accessed in other package .
+
+Polymorphism: ( many behaviour) 
+- Compile time 
+  - ex: overloading
+- Run time
+  - ex: overriding 
+
+Dynamic Method Dispatch: 
+ - In inheritance , same method all classes, overriding occurs. 
+
+final: 
+ - can be used in variables, methods, classes 
+ - final makes a method non over ridable. 

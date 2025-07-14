@@ -17,7 +17,7 @@ async javascript
 v8
 Higher Order functions
 Map filter reduce
-Stack, Event loop, mini Task Queue, Task Queue & Concurrency
+Stack, Event loop, Micro Task Queue, Task Queue & Concurrency
 Callback hell
 Promises
 Promise chaining & error handling
