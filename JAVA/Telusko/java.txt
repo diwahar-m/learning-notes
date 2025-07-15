@@ -17,3 +17,29 @@ Dynamic Method Dispatch:
 final: 
  - can be used in variables, methods, classes 
  - final makes a method non over ridable. 
+
+
+Annotations: 
+  - supplement to the compiler or run time 
+  - passing extra info to compiler or run time.
+  - There are annotations for variables, methods, classes
+  - Ex: @Override, @Deprecated
+
+Types of Interface:
+ - Normal
+   - Interface with 2 or more methods
+ - Functional/(SAM) 
+   - Single Abstract Method  
+   - single method
+ - Marker
+   - blank method
+   - Ex: serialization: saving data in hard drive.
+   - Ex: deSerialization: retrieving data from hard drive.
+
+Error: 
+ - Compile time error 
+ - Runtime error :
+   - Exception handling
+ - Logical error 
+
+
