@@ -2,7 +2,7 @@ package JAVA.Telusko;
 
 class A {
     public void calling(){
-        System.out.println("This is inner class of A");
+        System.out.println("This is the method of A");
     }
 
     class B{

@@ -3,7 +3,7 @@ package JAVA.Telusko;
 
 // class - class -> extends
 // class - interface -> implements 
-// iterface - interface -> extends
+// interface - interface -> extends
 
 
 // interface is just for a design

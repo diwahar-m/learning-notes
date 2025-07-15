@@ -42,4 +42,14 @@ Error:
    - Exception handling
  - Logical error 
 
+Throwable:
+1. Error
+2. Exception
+   1. RuntimeException (unchecked)
+   2. SQl Exception - dev needs to handle this.
+   3. IO Exception -  dev needs to handle this. 
+
+Scheduler
+ - allows the threads to execute in the OS
+
 

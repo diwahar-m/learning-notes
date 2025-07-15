@@ -13,8 +13,6 @@ class B extends A {
 }
 
 public class casting {
-
-
     public static void main(String[] args) {
         A obj = (A) new B(); // Upcasting
         obj.show1();

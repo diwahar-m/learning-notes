@@ -332,4 +332,6 @@ fabric renderer
 
 nativewind package 
  - to use tailwind css.
-@react-native-vision-camera 
+native-base
+@react-native-vision-camera  
+@react-native-community/blur
