@@ -49,7 +49,31 @@ Throwable:
    2. SQl Exception - dev needs to handle this.
    3. IO Exception -  dev needs to handle this. 
 
+Threads: 
+ - Threads together with mutation is not a good idea.
+ - Use 'Thread Safe' if working with mutation 
+
+Thread Safe: 
+ - Only one thread works here. 
+
+Thread States: 
+ - New 
+ - Runnable
+ - Running 
+ - Waiting 
+ - Running 
+ - Dead 
+
 Scheduler
  - allows the threads to execute in the OS
 
 
+Collection: 
+ - List
+   - ArrayList 
+   - Linked list
+ - Queue 
+   - DeQueue
+ - Set
+   - HashSet 
+   - Linked Hashset

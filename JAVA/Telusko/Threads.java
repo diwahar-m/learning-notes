@@ -47,6 +47,17 @@ class D implements Runnable{
 }
 }
 
+class Counter {
+    int count;
+
+    // synchronized 
+    // - makes the method to run only once at the time
+
+    public synchronized void increment(){
+        count++;
+    }
+}
+
 
 // ------------------------------
 
