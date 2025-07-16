@@ -1,6 +1,7 @@
 package JAVA.Telusko;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -28,6 +29,10 @@ public class Comparators {
         studs.add(new Student(34, "mol"));
         studs.add(new Student(9, "eddie"));
 
-        System.out.println(studs);
+
+        Collections.sort(studs, com);
+
+        for (Student s: studs)
+            System.out.println(s);
     }
 }

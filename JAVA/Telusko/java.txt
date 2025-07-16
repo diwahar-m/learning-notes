@@ -77,3 +77,8 @@ Collection:
  - Set
    - HashSet 
    - Linked Hashset
+
+Streams 
+ - can be used only once 
+
+
