@@ -15,6 +15,7 @@ public class Printf {
         // 
         System.out.printf("Number integer is %d \n" , j);
         System.out.printf("Double is % .2f \n", num);
-
+    
+    
     }
 }
